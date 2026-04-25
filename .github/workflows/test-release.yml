@@ -17,10 +17,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: List files
+        run: ls -la
+
       - name: Run tests
-        run: |
-          find test -name "*.test.js" -type f
-          node --test test/core/analyze/analyze-sessions.test.js
+        run: node --test test/core/analyze/analyze-sessions.test.js
 
   release:
     needs: test
@@ -31,7 +32,6 @@ jobs:
 
       - name: Create version tag
         run: |
-          git checkout main
-          VERSION="v$(node -p \"require('./package.json').version\")"
+          VERSION=v$(node -p "require('./package.json').version")
           git tag "$VERSION"
           git push origin "$VERSION"
