@@ -5,7 +5,8 @@
   "main": ".opencode/plugins/agent-insights.js",
   "files": [
     "src/",
-    ".opencode/"
+    ".opencode/",
+    "test/"
   ],
   "scripts": {
     "test": "node --test \"test/**/*.test.js\""
