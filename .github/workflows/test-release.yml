@@ -36,5 +36,7 @@ jobs:
       - name: Create version tag
         run: |
           VERSION=v$(node -p "require('./package.json').version")
+          git tag -d "$VERSION" 2>/dev/null || true
+          git push origin ":refs/tags/$VERSION" 2>/dev/null || true
           git tag "$VERSION"
           git push origin "$VERSION"
