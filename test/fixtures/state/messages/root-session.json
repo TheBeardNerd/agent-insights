@@ -1,0 +1,6 @@
+[
+  { "role": "user", "text": "Investigate a failing build" },
+  { "role": "assistant", "tools": ["glob", "read"] },
+  { "role": "user", "text": "Fix only the login page regression" },
+  { "role": "assistant", "tools": ["apply_patch"] }
+]

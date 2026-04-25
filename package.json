@@ -1,0 +1,13 @@
+{
+  "name": "agent-insights",
+  "version": "0.1.0",
+  "type": "module",
+  "main": ".opencode/plugins/agent-insights.js",
+  "files": [
+    "src/",
+    ".opencode/"
+  ],
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  }
+}
