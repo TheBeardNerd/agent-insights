@@ -17,11 +17,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: List files
-        run: ls -la
-
       - name: Run tests
-        run: node --test test/core/analyze/analyze-sessions.test.js
+        run: node --test "test/**/*.test.js"
 
   release:
     needs: test
