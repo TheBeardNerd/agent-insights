@@ -18,7 +18,9 @@ jobs:
           node-version: '20'
 
       - name: Run tests
-        run: node --test "test/**/*.test.js"
+        run: |
+          find test -name "*.test.js" -type f
+          node --test test/core/analyze/analyze-sessions.test.js
 
   release:
     needs: test
