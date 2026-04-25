@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "type": "module",
   "main": ".opencode/plugins/agent-insights.js",
-  "files": [
-    "src/",
-    ".opencode/",
-    "test/"
-  ],
   "scripts": {
     "test": "node --test \"test/**/*.test.js\""
   }
