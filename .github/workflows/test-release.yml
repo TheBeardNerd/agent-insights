@@ -19,10 +19,9 @@ jobs:
 
       - name: Run tests
         run: |
-          pwd
-          ls -R test/
-          node --test test/core/analyze/analyze-sessions.test.js
-          node --test test/opencode/create-command.test.js
+          for f in test/core/analyze/*.test.js test/core/ingest/*.test.js test/core/report/*.test.js test/opencode/*.test.js; do
+            node --test "$f"
+          done
 
   release:
     needs: test
