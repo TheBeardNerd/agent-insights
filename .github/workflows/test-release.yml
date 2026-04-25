@@ -17,14 +17,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: |
-          ls -la
-          npm install
-          ls -la node_modules/
-
       - name: Run tests
-        run: npm test
+        run: node --test "test/**/*.test.js"
 
   release:
     needs: test
