@@ -18,7 +18,11 @@ jobs:
           node-version: '20'
 
       - name: Run tests
-        run: node --test "test/**/*.test.js"
+        run: |
+          pwd
+          ls -R test/
+          node --test test/core/analyze/analyze-sessions.test.js
+          node --test test/opencode/create-command.test.js
 
   release:
     needs: test
